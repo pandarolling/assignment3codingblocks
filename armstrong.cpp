@@ -1,14 +1,23 @@
 // armstrong.cpp
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int isArmstrong(int num){
+	int dig = 0;
 	int temp = num;
 	int sum =0;
+
+	while( temp != 0){
+		dig++;
+		temp /= 10;
+	}
+
+	temp = num;
 	while(num != 0){
 		int ldigit = num %10;
 
-		sum= sum+ (ldigit*ldigit*ldigit);
+		sum= sum+ pow(ldigit,dig);
 		num /= 10;
 	}
 
