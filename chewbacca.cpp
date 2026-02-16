@@ -9,7 +9,7 @@ int main(){
 	unsigned long long ans =0;
 
 	int i =0;
-	while(arr[i] != '\0'){
+	while(i <arr.length()){
 		
 		if(arr[i] == '9' && i ==0){
 				i++;
